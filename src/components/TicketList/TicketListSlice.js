@@ -14,7 +14,9 @@ const ticketList = createSlice({
 	},
 	reducers: {
 		setTickets: (state, action) => {
-			state.tickets = [...action.payload]
+			state.tickets = [...action.payload].sort((a, b) =>
+				a.completed > b.completed ? -1 : 1
+			)
 		}
 	},
 	extraReducers: builder => {
