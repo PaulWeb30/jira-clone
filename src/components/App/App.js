@@ -14,7 +14,7 @@ function App() {
 		dispatch(fetchTickets())
 	}, [])
 
-	const onClickTicket = React.useCallback((id) => {
+	const onClickTicket = id => {
 		return () => {
 			const ticketsCopy = JSON.parse(JSON.stringify(tickets))
 			const ticket = ticketsCopy.find(t => t.id === id)
@@ -23,7 +23,7 @@ function App() {
 			} 
 			dispatch(setTickets(ticketsCopy))
 		}
-	},[])
+	}
 
 	return (
 		<div className={cl.wrapper}>
