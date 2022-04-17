@@ -1,0 +1,38 @@
+.container {
+	width: 1500px;
+	margin: 20px auto 100px auto;
+}
+
+.content {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background: #ffffff;
+	border: 1px solid #111111;
+	box-sizing: border-box;
+	border-radius: 15px;
+	padding: 40px;
+	min-height: 660px;
+	gap: 20px;
+}
+.block {
+	flex: 1 1 33.333%;
+	min-height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: #ffffff;
+	box-sizing: border-box;
+	border-radius: 15px;
+	padding: 30px;
+	gap: 15px;
+}
+
+.title {
+	text-align: left;
+	font-size: 60px;
+	line-height: 70px;
+	color: #000000;
+}
+
+
