@@ -1,6 +1,6 @@
 import React from 'react'
 import cl from './Board.module.scss'
-import BoardItem from '../BardItem/BoardItem'
+import BoardItem from '../BoardItem/BoardItem'
 const Board = ({ onClickTicket }) => {
 	
 	return (

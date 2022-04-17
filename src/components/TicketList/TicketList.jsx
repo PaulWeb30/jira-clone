@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import cl from './TicketList.module.scss'
 const TicketList = ({ onClickTicket }) => {
 	const { tickets } = useSelector(state => state.ticketsList)
-	const colors = ['#FF0000', '#00D1FF', '#1400FF', '#FF00B8']
+	const colors = ['#FF0000', '#00D1FF', '#1400FF', '#FF00B8', 'purple', 'green']
 	return (
 		<div className={cl.container}>
 			<h1 className={cl.title}>Ticket list</h1>
@@ -17,7 +17,7 @@ const TicketList = ({ onClickTicket }) => {
 								}}
 								className={cl.user}
 							>
-								{t.username.split(' ')[0][0] + t.username.split(' ')[0][1]}
+								{t.name[0] + t.username[0]}
 							</p>
 							<p className={cl.text}>{t.title}</p>
 							<p className={cl.status}>
