@@ -9,11 +9,11 @@ const TicketList = ({ onClickTicket }) => {
 			<h1 className={cl.title}>Ticket list</h1>
 			<div className={cl.content}>
 				{tickets &&
-					tickets.map(t => (
+					tickets.map((t, idx) => (
 						<div onClick={onClickTicket(t.id)} className={cl.block} key={t.id}>
 							<p
 								style={{
-									background: colors[t.id],
+									background: colors[idx],
 								}}
 								className={cl.user}
 							>

@@ -9,11 +9,11 @@ const BoardItem = ({ completedStatus, onClickTicket }) => {
 			{tickets &&
 				tickets
 					.filter(t => t.completed === completedStatus)
-					.map(t => (
+					.map((t, idx) => (
 						<div key={t.id} onClick={onClickTicket(t.id)} className={cl.el}>
 							<p
 								style={{
-									background: colors[t.id],
+									background: colors[idx],
 								}}
 								className={cl.user}
 							>

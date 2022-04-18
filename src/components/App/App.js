@@ -7,7 +7,6 @@ import Board from '../Board/Board'
 import cl from './App.module.scss'
 
 function App() {
-	
 	const { tickets } = useSelector(state => state.ticketsList)
 	const dispatch = useDispatch()
 	React.useEffect(() => {
@@ -20,7 +19,7 @@ function App() {
 			const ticket = ticketsCopy.find(t => t.id === id)
 			if (ticket.completed !== 3) {
 				ticket.completed += 1
-			} 
+			}
 			dispatch(setTickets(ticketsCopy))
 		}
 	}
