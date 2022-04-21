@@ -1,15 +1,20 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React, { FC } from 'react'
+import { useAppSelector } from '../../hooks/hooks'
 import cl from './TicketList.module.scss'
-const TicketList = ({ onClickTicket }) => {
-	const { tickets } = useSelector(state => state.ticketsList)
+
+interface TicketProps {
+	onClickTicket: Function
+}
+
+const TicketList: FC<TicketProps> = ({ onClickTicket }) => {
+	const { tickets } = useAppSelector(state => state.ticketsList)
 	const colors = ['#FF0000', '#00D1FF', '#1400FF', '#FF00B8', 'purple', 'green']
 	return (
 		<div className={cl.container}>
 			<h1 className={cl.title}>Ticket list</h1>
 			<div className={cl.content}>
 				{tickets &&
-					tickets.map((t, idx) => (
+					tickets.map((t, idx: number) => (
 						<div onClick={onClickTicket(t.id)} className={cl.block} key={t.id}>
 							<p
 								style={{
