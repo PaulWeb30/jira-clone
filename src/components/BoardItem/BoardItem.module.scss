@@ -8,13 +8,23 @@
 	font-size: 36px;
 	color: #ffffff;
 	text-transform: uppercase;
+	@media screen and (max-width: 1300px) {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 20px;
+	}
 }
 
 .title {
-	text-align: left;
+	text-align: center;
 	font-size: 60px;
 	line-height: 70px;
 	color: #000000;
+	max-width: 260px;
+		@media screen and (max-width: 1300px) {
+		font-size: 40px;
+	}
 }
 
 .el {
@@ -22,6 +32,7 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	gap: 7px;
 	background: #ffffff;
 	border: 1px solid #333333;
 	box-sizing: border-box;
